@@ -9,3 +9,8 @@ df -h
 ```
 du -hs /path/to/dir
 ```
+
+###### Find Size of a Dir individual folders and sort by size
+```
+du -h | sort -h
+```
