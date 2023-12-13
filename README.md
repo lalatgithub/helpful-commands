@@ -14,3 +14,8 @@ du -hs /path/to/dir
 ```
 du -h | sort -h
 ```
+
+###### Trigger Kubernetes Job from CronJob
+```
+kubectl create job --from=cronjob/<cronjob-name> <job-name-to-be-created> -n <namespace-name>
+```
