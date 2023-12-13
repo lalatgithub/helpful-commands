@@ -1,4 +1,4 @@
-#### Helpful Linux Commands for Daily Use
+#### Helpful Commands for Daily Use
 
 ###### Disk usage
 ```
@@ -18,4 +18,15 @@ du -h | sort -h
 ###### Trigger Kubernetes Job from CronJob
 ```
 kubectl create job --from=cronjob/<cronjob-name> <job-name-to-be-created> -n <namespace-name>
+```
+
+###### Find the current connection slot usage and limits in PostgreSQL
+```
+   select max_conn, used, res_for_super,((max_conn - res_for_super)-used) as res_for_normal
+   from
+   (select count(*) used from pg_stat_activity) t1,
+   (select setting::int res_for_super from pg_settings
+   where name='superuser_reserved_connections') t2,
+   (select setting::int max_conn from pg_settings where name='max_connections') t3
+
 ```
