@@ -15,6 +15,16 @@ du -hs /path/to/dir
 du -h | sort -h
 ```
 
+###### use SUDO without password prompt for current user
+```
+sudo visudo
+```
+
+In the bottom of the file, add the following line:
+```
+$USER ALL=(ALL) NOPASSWD: ALL
+```
+
 ###### Trigger Kubernetes Job from CronJob
 ```
 kubectl create job --from=cronjob/<cronjob-name> <job-name-to-be-created> -n <namespace-name>
@@ -30,3 +40,7 @@ kubectl create job --from=cronjob/<cronjob-name> <job-name-to-be-created> -n <na
    (select setting::int max_conn from pg_settings where name='max_connections') t3
 
 ```
+
+###### Enable COPY PASTE between HOST machine and Virtualbox machine
+https://codetryout.com/vbox-guest-additions-ubuntu-22/
+
