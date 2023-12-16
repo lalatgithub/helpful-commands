@@ -25,6 +25,11 @@ In the bottom of the file, add the following line:
 $USER ALL=(ALL) NOPASSWD: ALL
 ```
 
+###### Check port usage
+```
+sudo lsof -i :8000
+```
+
 ###### Trigger Kubernetes Job from CronJob
 ```
 kubectl create job --from=cronjob/<cronjob-name> <job-name-to-be-created> -n <namespace-name>
