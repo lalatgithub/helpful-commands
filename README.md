@@ -43,9 +43,13 @@ kubectl create job --from=cronjob/<cronjob-name> <job-name-to-be-created> -n <na
    (select setting::int res_for_super from pg_settings
    where name='superuser_reserved_connections') t2,
    (select setting::int max_conn from pg_settings where name='max_connections') t3
-
 ```
 
 ###### Enable COPY PASTE between HOST machine and Virtualbox machine
 https://codetryout.com/vbox-guest-additions-ubuntu-22/
+
+###### Kdenlive Noise Suppressor Plugin for Ubundu
+https://kentwest.neocities.org/westk/librnnoise
+
+
 
