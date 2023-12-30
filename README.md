@@ -51,5 +51,7 @@ https://codetryout.com/vbox-guest-additions-ubuntu-22/
 ###### Kdenlive Noise Suppressor Plugin for Ubundu
 https://kentwest.neocities.org/westk/librnnoise
 
-
-
+###### Export all env vars from `.env` before running a script
+```
+export $(cat .env | xargs) && python main.py
+```
