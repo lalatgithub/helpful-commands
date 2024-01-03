@@ -15,6 +15,17 @@ du -hs /path/to/dir
 du -h | sort -h
 ```
 
+###### Add user to sudoers file
+```
+su root 
+nano /etc/sudoers
+```
+
+Then add the user below admin user like below syntax.
+```
+{YOUR_USERNAME} ALL=(ALL)  ALL
+```
+
 ###### use SUDO without password prompt for current user
 ```
 sudo visudo
